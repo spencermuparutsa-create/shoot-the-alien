@@ -20,5 +20,18 @@ def draw():
     screen.draw.text(msg,(100,100),color = ("black"))
 
 
+def on_mouse_down(pos):
+    global msg
+    if turtle.collidepoint(pos):
+        turtle.x = random.randint(0,500)
+        turtle.y = random.randint(0,500)
+        msg = "good job"
+    else:
+        msg = "try again"
+
+
+
+
+
 
 pgzrun.go()
